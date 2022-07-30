@@ -16,3 +16,4 @@ admin...
 eh i will try it anyways!
 
 (made in java)
+P.S learning from ThinMatrix! (and ignore bin folder. src folder is where the real code resides!)

@@ -72,14 +72,14 @@ public class MainGameLoop {
 		}
 		
 		Light sun = new Light(new Vector3f(0,1000,-7000),new Vector3f(0.5f,0.5f,0.5f));
-		Light lamp = new Light(new Vector3f(185,10,-293),new Vector3f(2,0,0), new Vector3f(1, 0.01f, 0.002f));
+		//Light lamp = new Light(new Vector3f(185,10,-293),new Vector3f(2,0,0), new Vector3f(1, 0.01f, 0.002f));
 		List<Light> lights = new ArrayList<Light>();
 		lights.add(sun);
-		lights.add(lamp);
+		//lights.add(lamp);
 		
-		List<GuiTexture> guis = new ArrayList<GuiTexture>();
-		GuiTexture gui1 = new GuiTexture(loader.loadTexture("jim"), new Vector2f(0.5f, 0.5f), new Vector2f(0.25f, 0.25f));
-		guis.add(gui1);
+		//List<GuiTexture> guis = new ArrayList<GuiTexture>();
+		//GuiTexture gui1 = new GuiTexture(loader.loadTexture("jim"), new Vector2f(0.5f, 0.5f), new Vector2f(0.25f, 0.25f));
+		//guis.add(gui1);
 		
 		//PLAYER
 		ModelData dataPlayer = OBJFileLoader.loadOBJ("player"); 

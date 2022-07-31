@@ -71,9 +71,11 @@ public class MainGameLoop {
 			entities.add(new Entity(grassTexturedModel, random.nextInt(4),new Vector3f(x,y,z),0,0,0,1));
 		}
 		
-		Light light = new Light(new Vector3f(20000,20000,2000),new Vector3f(1,1,1));
+		Light sun = new Light(new Vector3f(20000,20000,2000),new Vector3f(1,1,1));
+		Light light1 = new Light(new Vector3f(185,10,-293),new Vector3f(2,0,0), new Vector3f(1,0.01f,0.002f));
 		List<Light> lights = new ArrayList<Light>();
-		lights.add(light);
+		lights.add(sun);
+		lights.add(light1);
 		
 		List<GuiTexture> guis = new ArrayList<GuiTexture>();
 		GuiTexture gui1 = new GuiTexture(loader.loadTexture("image"), new Vector2f(0.5f, 0.5f), new Vector2f(0.25f, 0.25f));
@@ -84,10 +86,9 @@ public class MainGameLoop {
 		RawModel rawPlayer = loader.loadToVAO(dataPlayer.getVertices(), dataPlayer.getTextureCoords(), dataPlayer.getNormals(), dataPlayer.getIndices());
 		TexturedModel playerTexturedModel = new TexturedModel(rawPlayer, new ModelTexture(loader.loadTexture("player")));
 		
-		Player player = new Player(playerTexturedModel, new Vector3f(00, 0, 00), 0, 0, 0, 0.5f);
+		Player player = new Player(playerTexturedModel, new Vector3f(0, 0, 0), 0, 0, 0, 0.5f);
 		Camera camera = new Camera(player);
 		GuiRenderer guiRenderer = new GuiRenderer(loader);
-		
 		
 		//MAIN GAME LOOP
 		while(!Display.isCloseRequested()){
